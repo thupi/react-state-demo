@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Jotai } from "./views/jotai";
+import { Legend } from "./views/legend";
+import { Mobx } from "./views/mobx";
+import { Recoil } from "./views/recoil";
+import { Redux } from "./views/redux";
+import { Valtio } from "./views/valtio";
+import { Xstate } from "./views/xstate";
+import { Zustand } from "./views/zustand";
 
-function App() {
+const panes = [Jotai, Legend, Mobx, Recoil, Redux, Valtio, Xstate, Zustand];
+const paneSize = 300;
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ width: "100vw", height: "100vh", overflowX: "scroll" }}>
+      <div style={{ width: panes.length * paneSize }}>
+        {panes.map((Component) => (
+          <div
+            style={{
+              width: paneSize,
+              float: "left",
+            }}
+          >
+            <Component />
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
-
-export default App;
+};
