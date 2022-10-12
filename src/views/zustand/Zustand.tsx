@@ -7,7 +7,7 @@ const useCountStore = create(
       count: 0,
     },
     (set) => ({
-      add: () => set((prev) => ({ count: prev.count + 1 })),
+      add: () => {},
       subtract: () => set((prev) => ({ count: prev.count - 1 })),
     })
   )
