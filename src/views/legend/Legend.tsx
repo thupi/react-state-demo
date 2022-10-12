@@ -16,7 +16,7 @@ const handleSubtract = () => {
 export const Legend = () => {
   return (
     <div>
-      <h1>Legend</h1>
+      <h1>Legend State</h1>
       <h2>{count}</h2>
       <button onClick={handleAdd}>+</button>
       <button onClick={handleSubtract}>-</button>

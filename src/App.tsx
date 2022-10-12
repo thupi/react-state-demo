@@ -13,12 +13,15 @@ const paneSize = 300;
 export const App = () => {
   return (
     <div style={{ width: "100vw", height: "100vh", overflowX: "scroll" }}>
-      <div style={{ width: panes.length * paneSize }}>
+      <div style={{ width: panes.length * paneSize, height: "100vh" }}>
         {panes.map((Component) => (
           <div
             style={{
               width: paneSize,
               float: "left",
+              borderRight: "2px dashed #ddd",
+              height: "100vh",
+              padding: 20
             }}
           >
             <Component />
