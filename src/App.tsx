@@ -7,7 +7,9 @@ import { Valtio } from "./views/valtio";
 import { Xstate } from "./views/xstate";
 import { Zustand } from "./views/zustand";
 
-const panes = [Jotai, Legend, Mobx, Recoil, Redux, Valtio, Xstate, Zustand];
+const oldPanes = [Jotai, Legend, Mobx, Recoil, Redux, Valtio, Xstate, Zustand];
+const newPanes = [Mobx, Zustand];
+const panes = newPanes;
 const paneSize = 300;
 
 export const App = () => {
@@ -21,7 +23,7 @@ export const App = () => {
               float: "left",
               borderRight: "2px dashed #ddd",
               height: "100vh",
-              padding: 20
+              padding: 20,
             }}
           >
             <Component />
